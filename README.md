@@ -1,3 +1,7 @@
+### 注意：启动 node 版本需 14.18+
+### 注意：启动 node 版本需 14.18+
+### 注意：启动 node 版本需 14.18+
+
 # vue-manage-system
 
 <a href="https://github.com/vuejs/vue">

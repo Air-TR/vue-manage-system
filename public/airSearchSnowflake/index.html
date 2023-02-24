@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript下雪网页特效代码</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <div class="wrapper">
+      <p>Wind Direction</p>
+      <div class="direction-switcher">
+        <input type="radio" name="direction" id="left" />
+        <label for="left">Left</label>
+
+        <input type="radio" name="direction" id="none" checked />
+        <label for="none">None</label>
+
+        <input type="radio" name="direction" id="right" />
+        <label for="right">Right</label>
+        <span class="slider"></span>
+      </div>
+      <p>Time</p>
+      <div class="select">
+        <input type="text" readonly placeholder="Time" value="night" />
+        <div class="select-content">
+          <div class="option">morning</div>
+          <div class="option">afternoon</div>
+          <div class="option">evening</div>
+          <div class="option">night</div>
+        </div>
+      </div>
+    </div> -->
+    <form
+      autocomplete="off"
+      style="
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 23%;
+        text-align: center;
+      "
+    >
+      <h2 style="color: rgb(26, 192, 204); font-family: Times New Roman">
+        Air Search
+      </h2>
+      <br />
+      <input
+        type="text"
+        id="showAjaxText"
+        onfocus="this.style.border='1px #598CEE solid';"
+        onblur="this.style.border='1px #BBB solid';"
+        style="
+          outline: none;
+          border: 1px #bbb solid;
+          font-size: 16px;
+          width: 500px;
+          height: 33px;
+          padding-left: 7px;
+          background: scroll 0 0 #ffffff;
+        "
+      /><button
+        type="button"
+        id="search"
+        onclick="baiduSearch()"
+        onmouseover="this.style.backgroundColor='#317EF3';"
+        onmouseout="this.style.backgroundColor='#3385FF';"
+        style="
+          width: 80px;
+          height: 33px;
+          background-color: #3385ff;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          color: white;
+          font-size: 15px;
+        "
+      >
+        搜 索
+      </button>
+      <input type="text" style="display: none" />
+      <div
+        id="showAjaxId"
+        style="
+          margin-left: 425px;
+          width: 510px;
+          height: 220px;
+          display: none;
+          overflow-y: auto;
+          overflow-x: hidden;
+        "
+      ></div>
+    </form>
+    <div
+      style="
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        top: 85%;
+      "
+    >
+      <p style="color: #aaa">© www.tr.com 2023</p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<script type="text/javascript">
+  function baiduSearch() {
+    var wd = document.getElementById("showAjaxText").value;
+    if (wd.trim()) {
+      // window.location.href = "https://www.baidu.com/s?wd=" + wd;
+      window.open("https://www.baidu.com/s?wd=" + wd);
+    }
+  }
+
+  document.onkeydown = function (e) {
+    if ((e.keyCode || e.which) == 13) {
+      document.getElementById("search").click();
+    }
+  };
+</script>
