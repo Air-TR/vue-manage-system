@@ -249,6 +249,11 @@ const items = [
         title: "雪花",
         permiss: "1",
       },
+      {
+        index: "/mapDragPlanRoute",
+        title: "地图-拖拽规划路线",
+        permiss: "1",
+      },
     ],
   },
   // {

@@ -236,6 +236,14 @@ const routes: RouteRecordRaw[] = [
         component: () => import("../air/Map.vue"),
       },
       {
+        path: "/mapDragPlanRoute",
+        name: "MapDragPlanRoute",
+        meta: {
+          title: "地图-拖拽规划路线",
+        },
+        component: () => import("../air/MapDragPlanRoute.vue"),
+      },
+      {
         path: "/waveBackground",
         name: "WaveBackground",
         meta: {
