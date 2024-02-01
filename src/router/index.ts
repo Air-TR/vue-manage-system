@@ -275,6 +275,22 @@ const routes: RouteRecordRaw[] = [
         },
         component: () => import("../air/AirSearchAutoTip.vue"),
       },
+      {
+        path: "/webSql",
+        name: "webSql",
+        meta: {
+          title: "Web-SQL",
+        },
+        component: () => import("../air/webSql.vue"),
+      },
+      {
+        path: "/softLicense",
+        name: "softLicense",
+        meta: {
+          title: "软件授权管理",
+        },
+        component: () => import("../air/softLicense.vue"),
+      },
     ],
   },
   {
@@ -297,14 +313,15 @@ router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | vue-manage-system`;
   const role = localStorage.getItem("ms_username");
   const permiss = usePermissStore();
-  if (!role && to.path !== "/login") {
-    next("/login");
-  } else if (to.meta.permiss && !permiss.key.includes(to.meta.permiss)) {
-    // 如果没有权限，则进入403
-    next("/403");
-  } else {
-    next();
-  }
+  // if (!role && to.path !== "/login") {
+  //   next("/login");
+  // } else if (to.meta.permiss && !permiss.key.includes(to.meta.permiss)) {
+  //   // 如果没有权限，则进入403
+  //   next("/403");
+  // } else {
+  //   next();
+  // }
+  next();
 });
 
 export default router;

@@ -85,6 +85,11 @@ const items = [
     permiss: "2",
     subs: [
       {
+        index: "/webSql",
+        title: "Web-SQL",
+        permiss: "2",
+      },
+      {
         index: "/table",
         title: "常用表格",
         permiss: "2",
@@ -97,6 +102,11 @@ const items = [
       {
         index: "/export",
         title: "导出Excel",
+        permiss: "2",
+      },
+      {
+        index: "/softLicense",
+        title: "软件授权",
         permiss: "2",
       },
     ],
